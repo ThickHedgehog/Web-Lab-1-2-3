@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<link rel="stylesheet" href="styles/styles1.css">
+    <meta charset="utf-8">
+    <title>Лаборатоная №1</title>
+  </head>
+  <body>
+	<p><a name="bottom1"></a></p>
+	<div id="video-bg">
+		<video width="100%" height="auto" muted="muted" preload="auto" autoplay="autoplay"
+		loop="loop" poster="files/photo.png">
+			<source src="files/video.mp4" type="video/mp4"></source>
+			<source src="files/video.webm" type="video/webm"></source>
+		</video>
+	</div>
+	<div class="outer">
+		<div class="inner">
+			<img class="Avatar" src="files/photo.jpg" width="450" height="350" alt="аватарка">
+			<table class="Card" cellspacing="5">
+				<tr>
+					<td><strong>ФИО:</strong></td>
+					<td>Отчисляенко Акакий Акакиевич</td>
+				</tr>
+				<tr>
+					<td><strong>Адрес:</strong></td>
+					<td>Москва, метро Савеловская</td>
+				</tr>
+				<tr>
+					<td><strong>Дата рождения:</strong></td>
+					<td>01.01.1999</td>
+				</tr>
+				<tr>
+					<td><strong>Телефон:</strong></td>
+					<td>8(999)123-45-67</td>
+				</tr>
+				<tr>
+					<td><strong>Почта:</strong></td>
+					<td>Proval@mail.ru</td>
+				</tr>
+			</table>
+			<input class="ColorBut" type="button" id="ChangeColorTable" value="Смена фона таблицы"/>
+			<form method="LINK" action="laba2.html#bottom">
+				<input class="Lab2href" type="submit" value="Лаборатоная №2">
+			</form>
+		</div>
+	</div>
+	<script>
+		window.onload = function() {
+			var button = document.getElementById('ChangeColorTable');
+			var table = document.getElementsByTagName('table')[0];
+			var colors = ['#bff099', '#facf84', '#a1eff7', '#d0a6f7', '#f7a6c9'];
+			button.onclick = function() {
+			table.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+			}
+		}
+	</script>
+ </body>
+</html>

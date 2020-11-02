@@ -1,0 +1,71 @@
+body {
+	background-color: #b0cbf5;
+}
+.Lab1href {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	font-size: 20px;
+	background-color: #6ca883;
+}
+.ClickTable {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	width: 150px;
+	font-size: 30px;
+}
+.ClickBut {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	height: 40px;
+	font-size: 20px;
+	background-color: #90c4de;
+}
+.CalcTable {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	width: 850px;
+	font-size: 30px;
+}
+.CalcBut {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	font-size: 20px;
+	background-color: #90c4de;
+}
+.ChangeArray {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	width: 850px;
+	font-size: 30px;
+}
+.ChangeInput {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	width: 205px;
+	font-size: 20px;
+	background-color: #90c4de;
+}
+.ChangeBut {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 1%;
+	width: 190px;
+	height: 80px;
+	font-size: 20px;
+	background-color: #90c4de;
+}

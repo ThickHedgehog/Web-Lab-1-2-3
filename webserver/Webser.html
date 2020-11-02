@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<style>
+	body {
+		background-color: #b0cbf5;
+	}	
+	.Avatar {
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+		margin-top: 1%;
+		border: 2px solid black;
+	}
+	.Card {
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+		margin-top: 1%;
+		width: 450px;
+		border: 4px ridge #c94456;
+		font-size: 20px;
+		background-color: #a2a4fa;
+	}
+	.Lab2href {
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+		margin-top: 1%;
+		font-size: 20px;
+		background-color: #6ca883;
+	}
+	.ColorBut {
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+		margin-top: 1%;
+		font-size: 20px;
+		background-color: #90c4de;
+	}
+	#video-bg {
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  overflow: hidden;
+	  z-index: 1;
+	  background: url(files/photo.png) no-repeat #FFF;
+	  background-size: cover;
+	}
+	#video-bg > video {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  width: auto;
+	  height: auto;
+	}
+	@supports (object-fit: cover) {
+	  #video-bg > video {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	  }
+	}
+	.outer {
+	  z-index: 2;
+	  display: table;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	}
+	.inner {
+	  display: table-cell;
+	  vertical-align: middle;
+	  margin-top: 10%;
+	}
+	</style>
+    <meta charset="utf-8">
+    <title>Лаборатоная №1</title>
+  </head>
+  <body>
+	<div id="video-bg">
+		<video width="100%" height="auto" muted="muted" preload="auto" autoplay="autoplay"
+		loop="loop" poster="photo.png">
+			<source src="video.mp4" type="video/mp4"></source>
+			<source src="video.webm" type="video/webm"></source>
+		</video>
+	</div>
+	<div class="outer">
+		<div class="inner">
+			<img class="Avatar" src="photo.jpg" width="450" height="350" alt="аватарка">
+			<table class="Card" cellspacing="5">
+				<tr>
+					<td><strong>ФИО:</strong></td>
+					<td>Отчисляенко Акакий Акакиевич</td>
+				</tr>
+				<tr>
+					<td><strong>Адрес:</strong></td>
+					<td>Москва, метро Савеловская</td>
+				</tr>
+				<tr>
+					<td><strong>Дата рождения:</strong></td>
+					<td>01.01.1999</td>
+				</tr>
+				<tr>
+					<td><strong>Телефон:</strong></td>
+					<td>8(999)123-45-67</td>
+				</tr>
+				<tr>
+					<td><strong>Почта:</strong></td>
+					<td>Proval@mail.ru</td>
+				</tr>
+			</table>
+			<input class="ColorBut" type="button" id="ChangeColorTable" value="Смена фона таблицы"/>
+		</div>
+	</div>
+	<script>
+		window.onload = function() {
+			var button = document.getElementById('ChangeColorTable');
+			var table = document.getElementsByTagName('table')[0];
+			var colors = ['#bff099', '#facf84', '#a1eff7', '#d0a6f7', '#f7a6c9'];
+			button.onclick = function() {
+			table.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+			}
+		}
+	</script>
+ </body>
+</html>
